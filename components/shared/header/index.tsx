@@ -1,7 +1,8 @@
 import { APP_NAME } from '@/lib/constants';
-import { ShoppingCart, UserIcon } from 'lucide-react';
+import { ShoppingCartIcon, UserIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 export default function Header() {
     return (
@@ -9,15 +10,25 @@ export default function Header() {
             <div className='wrapper flex-between'>
                 <div className='flex-start'>
                     <Link href={'/'} className='flex-start'>
-                        <Image src="/logo.svg" alt={"Home"} width={48} height={48} />
+                        <Image src="/logo.svg" alt={'Home'} width={48} height={48} />
                     </Link>
-                    <span className='hidden lg:block font-bold text-2xl'>
+                    <span className='hidden lg:block font-bold text-2xl ml-3'>
                         {APP_NAME}
                     </span>
                 </div>
-                {/* <div className='space '>
+                <div className='space-x-2'>
+                <Button asChild variant={'ghost'}>
+                    <Link href={'/cart'}>
+                        <ShoppingCartIcon />Cart
+                    </Link>
+                </Button>
+                <Button asChild variant={'ghost'}>
+                    <Link href={'/login'}>
+                        <UserIcon />Login
+                    </Link>
+                </Button>
 
-                </div> */}
+                </div>
             </div>
         </header>
     )

@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 const HomePage = () => {
   return (
     <div className="wrapper">
-      <div>Hola</div>
-      <Button variant="default">Click here!</Button>
+      <div>HomePage</div>
+      <Button variant={"default"} className="my-4">
+        Click here!
+      </Button>
     </div>
   );
 };
