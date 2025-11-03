@@ -23,7 +23,7 @@ export default function MainLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${interFont.variable} antialiased flex min-h-screen flex-col`}
+        className={`${interFont.variable} antialiased`}
       >
         <ThemeProvider
           attribute={'class'}
