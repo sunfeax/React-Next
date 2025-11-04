@@ -1,13 +1,12 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import ProductList from "@/components/shared/product/product-list";
+import sampleData from "@/db/sample-data";
+
 
 const HomePage = () => {
   return (
     <div className="wrapper">
-      <div>HomePage</div>
-      <Button variant={"default"} className="my-4">
-        Click here!
-      </Button>
+      <ProductList data={sampleData.products} title='Mi lista' />
     </div>
   );
 };
