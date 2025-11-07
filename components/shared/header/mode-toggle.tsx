@@ -25,27 +25,37 @@ const ModeToggle = () => {
             <DropdownMenuTrigger asChild>
                 <Button variant={'ghost'} className='focus-visible:ring-0 focus-visible:ring-offset-0'>
                     {theme === 'system' ? (<SunMoon />) : (
-                        theme === 'dark' ? (<MoonIcon />) : (<SunIcon />)
+                      theme === 'dark' ? (<MoonIcon />) : (<SunIcon />)
                     )}
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-                <DropdownMenuLabel>Appearance</DropdownMenuLabel>
-                <DropdownMenuCheckboxItem
-                    checked={theme === 'system'}
-                    onClick={() => setTheme('system')}
-                >System
-                </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem
-                    checked={theme === 'light'}
-                    onClick={() => setTheme('light')}
-                >Ligth
-                </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem
-                    checked={theme === 'dark'}
-                    onClick={() => setTheme('dark')}
-                >Dark
-                </DropdownMenuCheckboxItem>
+              <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+              <DropdownMenuCheckboxItem
+                checked={theme === 'system'}
+                onClick={() => setTheme('system')}
+              >System
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                checked={theme === 'light'}
+                onClick={() => setTheme('light')}
+              >Ligth
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                checked={theme === 'dark'}
+                onClick={() => setTheme('dark')}
+              >Dark
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                checked={theme === 'berry-sunset-light'}
+                onClick={() => setTheme('berry-sunset-light')}
+              >BerrySunset Light
+              </DropdownMenuCheckboxItem>
+              <DropdownMenuCheckboxItem
+                checked={theme === 'berry-sunset-dark'}
+                onClick={() => setTheme('berry-sunset-dark')}
+              >BerrySunset Dark
+              </DropdownMenuCheckboxItem>
             </DropdownMenuContent>
         </DropdownMenu>
     )

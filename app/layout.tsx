@@ -30,6 +30,7 @@ export default function MainLayout({
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
+          themes={["light", "dark", "berry-sunset-light", "berry-sunset-dark"]}
         >
           {children}
         </ThemeProvider>

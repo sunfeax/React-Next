@@ -9,7 +9,7 @@ const NotFound = () => {
             <Image src={"../logo.svg"} alt="logo" width={48} height={48} priority/>
             <div className="p-6 rounded-lg shadow-md text-center">
                 <h1 className="text-3xl font-bold mb-4">Not Found</h1>
-                <p className="text-destructive">Could not find the request page</p>
+                <p className="text-destructive">The request page could not be found.</p>
                 <Button
                     variant={'outline'}
                     className="mt-4 ml-2"

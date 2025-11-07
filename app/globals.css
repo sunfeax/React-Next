@@ -36,7 +36,6 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  /* --primary: oklch(0.208 0.042 265.755); */
   --primary: oklch(0.208 0.042 265.755);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
@@ -119,6 +118,90 @@
   --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10);
   --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10);
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+}
+
+.berry-sunset-light {
+  --background: oklch(0.98 0.01 70);       /* Почти белый с теплым подтоном */
+  --foreground: oklch(0.15 0.01 260);      /* Глубокий темно-синий/серый */
+  --card: oklch(1 0 0);                    /* Чистый белый */
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.55 0.25 350);         /* Яркий Малиновый (Berry) */
+  --primary-foreground: oklch(1 0 0);      /* Белый (текст на кнопке) */
+  --secondary: oklch(0.94 0.01 260);       /* Светло-серый/голубой фон */
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.9 0.01 70);             /* Очень светлый теплый серый */
+  --muted-foreground: oklch(0.55 0.01 260); /* Средне-серый (для подсказок) */
+  --accent: oklch(0.96 0.05 350);          /* Светло-малиновая подсветка */
+  --accent-foreground: var(--primary);     /* Текст малинового цвета на подсветке */
+  --border: oklch(0.85 0.01 70);           /* Тонкая теплая граница */
+  --input: var(--border);
+  --ring: var(--primary);                  /* Обводка фокуса */
+  --destructive: oklch(0.65 0.25 30);      /* Красный / Коралловый */
+  --destructive-foreground: oklch(1 0 0);  /* Белый */
+  --chart-1: var(--primary);
+  --chart-2: oklch(0.6 0.15 280);          /* Фиолетовый */
+  --chart-3: oklch(0.7 0.18 120);          /* Светло-зеленый */
+  --chart-4: oklch(0.75 0.15 70);          /* Персиковый */
+  --chart-5: oklch(0.65 0.15 200);         /* Бирюзовый */
+  --sidebar: var(--secondary);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Source Serif 4', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+  --shadow-color: oklch(0 0 0);
+  --shadow-sm: 0 1px 2px 0px hsl(0 0% 0% / 0.05);
+  --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10);
+}
+
+.berry-sunset-dark {
+  --background: oklch(0.18 0.02 260);      /* Очень темно-синий/серый */
+  --foreground: oklch(0.95 0.01 70);       /* Светлый теплый текст */
+  --card: oklch(0.24 0.02 260);            /* Чуть светлее фон карточек */
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.55 0.25 350);         /* Яркий Малиновый (Berry) */
+  --primary-foreground: oklch(1 0 0);      /* Белый */
+  --secondary: oklch(0.24 0.02 260);       /* Фон вторичных элементов */
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.3 0.02 260);            /* Темный, приглушенный фон */
+  --muted-foreground: oklch(0.6 0.01 70);  /* Приглушенный теплый текст */
+  --accent: oklch(0.35 0.1 350);           /* Темно-малиновая подсветка */
+  --accent-foreground: oklch(0.9 0.05 350);/* Яркий малиновый текст на подсветке */
+  --border: oklch(0.3 0.02 260);           /* Темная граница */
+  --input: var(--border);
+  --ring: var(--primary);                  /* Обводка фокуса */
+  --destructive: oklch(0.65 0.25 30);      /* Красный / Коралловый */
+  --destructive-foreground: oklch(1 0 0);  /* Белый */
+  --chart-1: var(--primary);
+  --chart-2: oklch(0.6 0.15 280);          /* Фиолетовый */
+  --chart-3: oklch(0.7 0.18 120);          /* Светло-зеленый */
+  --chart-4: oklch(0.75 0.15 70);          /* Персиковый */
+  --chart-5: oklch(0.65 0.15 200);         /* Бирюзовый */
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Source Serif 4', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --radius: 0.5rem;
+  --shadow-color: oklch(0.18 0.02 260); /* Цвет тени - темный фон */
+  --shadow-sm: 0 1px 2px 0px hsl(0 0% 0% / 0.15); /* Чуть заметнее */
+  --shadow: 0 2px 4px 0px hsl(0 0% 0% / 0.20);
 }
 
 @theme inline {

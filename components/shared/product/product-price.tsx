@@ -12,7 +12,7 @@ export default function ProductPrice({
   const [entera, decimales] = stringValue.split('.');
 
   return (
-    <p className={cn('flex items-center gap-0.5 text-2xl', className)}>
+    <p className={cn('text-green-500 flex items-center gap-0.5 text-xl', className)}>
       <Euro size={16} />
       {entera}
       <span className='text-xs align-super'>.{decimales}</span>

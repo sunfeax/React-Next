@@ -23,7 +23,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="flex-between gap-4">
           <p className="flex items-center gap-1">
             <span>{product.rating}</span>
-            <Star className="h-4 w-4" />
+            <Star className="h-4 w-4 fill-amber-500 stroke-0" />
           </p>
           {product.stock > 0 ? (
             <ProductPrice value={product.price} className={""} />
