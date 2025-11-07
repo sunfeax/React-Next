@@ -28,7 +28,7 @@ export default function MainLayout({
         <ThemeProvider
           attribute={'class'}
           defaultTheme="light"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
           themes={["light", "dark", "berry-sunset-light", "berry-sunset-dark"]}
         >
