@@ -1,8 +1,17 @@
-import { PrismaClient } from '@/lib/generated/prisma/client';
+import { PrismaClient, Prisma } from '@/lib/generated/prisma/client';
+import { PrismaPg } from '@prisma/adapter-pg'
 import sampleData from './sample-data';
+import 'dotenv/config'
+
+const adapter = new PrismaPg({
+  connectionString: process.env.DATABASE_URL,
+})
+
+const prisma = new PrismaClient({
+  adapter,
+});
 
 async function main() {
-    const prisma = new PrismaClient()
     await prisma.product.createMany({data: sampleData.products});
     console.log("productos introducidos en la BD");
 }
