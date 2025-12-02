@@ -26,7 +26,7 @@ export default function ProductCard({ product }: { product: Product }) {
             <Star className="h-4 w-4 fill-amber-500 stroke-0" />
           </p>
           {product.stock > 0 ? (
-            <ProductPrice value={product.price} className={""} />
+            <ProductPrice value={+product.price} className={""} />
           ) : (
             <p className="text-destructive">Out of stock</p>
           )}

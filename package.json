@@ -7,9 +7,9 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "d-up": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml up",
-    "d-d": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml down",
-    "init": "npm run d-up && npm run dev"
+    "compose": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml up",
+    "compose down": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml down",
+    "init": "npm run dev && npm run compose"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.0.1",
@@ -26,7 +26,8 @@
     "pg": "^8.16.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "tailwind-merge": "^3.3.1"
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
