@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "compose": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml up",
-    "compose down": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml down",
+    "compose-down": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml down",
     "init": "npm run dev && npm run compose"
   },
   "dependencies": {

@@ -1,4 +1,4 @@
-`use client`;
+"use client";
 
 import NotFound from "@/app/not-found";
 import ProductPrice from "@/components/shared/product/product-price";
