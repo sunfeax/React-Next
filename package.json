@@ -7,9 +7,9 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "compose": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml up",
+    "compose": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml up -d",
     "compose-down": "docker compose -f ./docker/proyecto/docker-compose.postgres.yaml down",
-    "init": "npm run dev && npm run compose"
+    "init": "npm run compose && npm run dev"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.0.1",

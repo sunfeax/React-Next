@@ -1,20 +1,29 @@
 'use server';
 
 import { prisma } from "@/db/prisma";
-import { convertToPlainObject } from "../utils";
+import { Product } from "@/types/product";
 
-export async function getLatestProducts() {
-  const data = await prisma.product.findMany({
-    orderBy: {createdAt: 'desc'}
-  });
-
-  return convertToPlainObject(data);
+function normalizeProduct(product: any): Product {
+  return {
+    ...product,
+    price: Number(product.price),
+    rating: Number(product.rating),
+    createdAt: product.createdAt ? product.createdAt.toISOString() : undefined,
+  };
 }
 
-export async function getProductBySlug(slug: string) {
-  const data = await prisma.product.findFirst({
-    where: {slug}
-  })
+export async function getLatestProducts(): Promise<Product[]> {
+  const data = await prisma.product.findMany({
+    orderBy: { createdAt: "desc" },
+  });
 
-  return data;
+  return data.map(normalizeProduct);
+}
+
+export async function getProductBySlug(slug: string): Promise<Product | null> {
+  const data = await prisma.product.findFirst({
+    where: { slug },
+  });
+
+  return data ? normalizeProduct(data) : null;
 }

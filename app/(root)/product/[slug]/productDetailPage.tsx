@@ -15,14 +15,22 @@ export default function ProductDetailPage({ product }: { product: Product }) {
     <div className="flex gap-20 items-start">
       <div className="flex flex-col">
         <Image
-          className="w-full max-w-xs rounded-2xl"
-          src={product.images[0]}
+          className="w-full max-w-xs rounded-2xl mb-4"
+          src={selectedImage}
           alt={product.name}
           width={300} height={300}
         />
         <div className="flex gap-2.5">
           {product.images.map((img) => (
-            <Image key={img} src={img} alt="" onClick={() => setSelectedImage(img)}/>
+            <Image
+              key={img}
+              src={img}
+              alt={`${product.name} thumbnail`}
+              width={80}
+              height={80}
+              className="cursor-pointer rounded-lg object-cover"
+              onClick={() => setSelectedImage(img)}
+            />
           ))}
         </div>
       </div>
